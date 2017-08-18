@@ -1,0 +1,76 @@
+{% extends "templates/full-base.twig" %}
+{% block content %}
+
+<section id="property">
+
+  <header style="background:url('{{property.thumbnail.src}}')">
+    <div class="container">
+      <h2 class="property-title">{{property.title}}</h2>
+    </div>
+  </header>
+
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-4 side">
+          <div class="contact-side">
+
+            <div class="map">
+             <div class="marker" data-lat="{{property.map.lat}}" data-lng="{{property.map.lng}}">
+               We are here
+             </div>
+            </div>
+
+            <address>
+              {{property.street}}<br>
+              {{property.city}}, {{property.county}}<br>
+              {{property.postcode}}
+              <!-- Small modal -->
+            </address>
+            <h4 class="price">£{{property.price}} <small>Per Week</small></h4>
+
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Rent Property</button>
+
+
+
+          </div>
+        </div>
+        <div class="col-sm-8 content">
+
+          <ul class="room">
+            {% for room in property.get_field('rooms') %}
+              <li>
+                <span class="info">
+                 <h4>{{room.rooms}}</h4>
+                 {% if room.bedroom_type is not empty %}
+                  {{room.bedroom_type}}
+                 {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+          
+          <h3>About {{property.title}} property</h2>
+
+          <div class="description">
+            {{property.content}}
+            {{property.price}}
+            {{property.date_available}}
+
+          </div>
+
+        </div>
+      </div>
+
+
+  </div>
+</section>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,142 @@
+
+.navbar-brand {
+    max-width:200px;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      display: block!important;
+      margin: 10px auto;
+    }
+  }
+
+.navbar-toggler {
+    background: #34b346;
+    border-radius: 3px;
+    font-weight: bold;
+    width:100%;
+    span {
+    font-size:0.9rem;
+    color:white;
+    }
+}
+
+  .navbar {
+
+    .container {
+      @include media-breakpoint-down(md) {
+      width:100%;
+    }
+  }
+    &.bg-faded {
+      background: #fff;
+      border-bottom: 1px solid rgb(241, 241, 241);
+    }
+    &.home {
+      border:none;
+    }
+    .navbar-nav {
+      li {
+        color: rgba(0,0,0,0.5);
+        font-weight: bold;
+        &.current-menu-item {
+          color:$brand-primary;
+      }
+      }
+      ul.dropdown-menu {
+        background: #3b3c3c;
+        padding:0;
+        border:none;
+
+        &:before {
+          @include triangle(15px, up, #3b3c3c);
+          content: "";
+          display: block;
+          position: absolute;
+          top: -8px;
+          left: 20px;
+        }
+
+        a {
+          color: #fff;
+          padding: 5px 10px;
+          font-size: 0.9rem;
+          font-weight: normal;
+          border-bottom: 1px solid #545454;
+
+          &:last-of-type {
+            border:none;
+          }
+
+          &:hover {
+            color:$brand-primary;
+          }
+        }
+      }
+    }
+  }
+
+
+#searchForm {
+  background:#f1f1f1;
+  padding:20px 0;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .holder {
+    background:#fff;
+    border: 1px solid #ececec;
+    border-radius: 2px;
+    margin:0;
+
+    > div, label {
+      padding:10px;
+      @include media-breakpoint-down(xs) {
+        padding:0 10px;
+      }
+    }
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .col-sm-3 {
+    border-right: 1px solid #ececec;
+    @include media-breakpoint-down(xs) {
+      border-bottom: 1px solid #ececec;
+      border-right: none;
+    }
+  }
+
+  .col-sm-2 {
+    border-right: 1px solid #ececec;
+    margin: 0;
+    padding: 16px 0 0!important;
+    text-align: center;
+
+    @include media-breakpoint-down(xs) {
+      border-bottom: 1px solid #ececec;
+      border-right: none;
+      padding: 5px 0 !important;
+    }
+
+    &:last-of-type{
+      border: none;
+      padding: 10px 10px 0 !important;
+      @include media-breakpoint-down(xs) {
+        padding-bottom:10px!important;
+      }
+    }
+  }
+  input {
+
+  }
+  select {
+    border: none;
+    border-radius: 0;
+  }
+}

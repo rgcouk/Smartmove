@@ -1,0 +1,11 @@
+.btn-secondary {
+  background:$brand-secondary;
+  border:1px solid $brand-secondary;
+  color:#fff;
+
+  &:hover {
+    background:darken($brand-secondary, 10%);
+    border:1px solid darken($brand-secondary, 10%);
+    color:#fff;
+  }
+}

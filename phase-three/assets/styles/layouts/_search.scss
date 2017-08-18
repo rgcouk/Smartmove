@@ -1,0 +1,27 @@
+#search {
+  padding:20px 0;
+
+  .card {
+    margin-bottom:20px;
+    border-radius: 2px;
+    img {
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
+    }
+      .card-block {
+        .card-title {
+
+        }
+        .card-text {
+
+        }
+      }
+      .card-footer {
+
+        &:last-of-type {
+          border-radius: none;
+        }
+      }
+
+  }
+}

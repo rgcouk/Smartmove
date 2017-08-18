@@ -1,0 +1,43 @@
+{% extends "templates/full-base.twig" %}
+
+{% block content %}
+
+{% include 'blocks/search-form.twig' %}
+
+<section id="search">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <h3>Filters</h3>
+      </div>
+      <div class="col-sm-10">
+        <div class="card-deck row">
+        {% for props in property %}
+
+        <div class="col-sm-4">
+          <div class="card">
+            <img class="card-img-top img-fluid" src="{{props.thumbnail.src}}" alt="{{props.title}}">
+            <div class="card-block">
+              <h2 class="card-title">{{props.title}}</h2>
+              <h4 class="price">£{{props.price}} <small>Per Week</small></h4>
+              <p class="card-text">
+                <address>
+                    {{props.street}}<br>
+                    {{props.city}}, {{props.county}}<br>
+                    {{props.postcode}}
+                </address>
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="{{props.guid}}" class="btn btn-primary">View Property</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

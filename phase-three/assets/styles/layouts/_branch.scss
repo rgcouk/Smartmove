@@ -1,0 +1,118 @@
+#branch {
+  @include gradient-horizontal(#d1f6ff, #fff, 0%, 25vh);
+  padding:30px 0;
+
+  h2.branch-title {
+    color: #3b3c3c;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .side {
+
+    .contact-side {
+      border: 1px solid rgba(204, 204, 204, 0.48);
+      border-radius: 3px;
+      text-align: center;
+      .map {
+        height:25vh;
+      }
+      address {
+        padding: 10px;
+        margin: 0 0 10px;
+        border-bottom: 1px solid #e7e7e7;
+      }
+
+      .phone {
+        padding: 0 10px 10px;
+        margin: 0 0 10px;
+        border-bottom: 1px solid #e7e7e7;
+        font-size:1.1rem;
+        color:$brand-primary;
+
+        i {
+          font-size: 1rem;
+          vertical-align: top;
+        }
+      }
+    }
+
+    h3 {
+      color:$brand-primary;
+      margin:10px 0;
+      font-size:1.3rem;
+    }
+
+    .btn-group-justified {
+      padding:0 10px 10px;
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: separate;
+
+      .btn-group {
+        float: none;
+        display: table-cell;
+        width: 1%;
+
+        .btn {
+          width: 100%;
+          i {
+            vertical-align: bottom;
+          }
+        }
+  }
+  }
+}
+
+
+  .staff {
+    list-style: none;
+    padding:0;
+    li {
+      padding:5px 0;
+      border-bottom:1px solid #ccc;
+      img {
+        max-width: 70px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 50px;
+        border: 2px solid #ffffff;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.22);
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+
+      .info {
+        display: inline-block;
+
+        .phone {
+          background: #e8e8e8;
+          border-radius: 25px;
+          padding: 0 5px;
+
+          i {
+          font-size: 16px;
+          vertical-align: text-bottom;
+          }
+        }
+      }
+
+    }
+  }
+
+  .content {
+    padding:0;
+    h3 {
+      font-size: 1.2rem;
+      margin: 10px 0 0;
+      color: $brand-primary;
+    }
+  }
+}

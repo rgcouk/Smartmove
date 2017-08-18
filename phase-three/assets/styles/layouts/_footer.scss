@@ -1,0 +1,54 @@
+
+footer {
+  border-top:1px solid #ececec;
+  padding:20px 0 0;
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+
+    h3 {
+      color:$brand-primary;
+      font-size:1.2rem;
+      font-weight: bold;
+    }
+
+    .cmp {
+      text-align: center;
+      img {
+        max-width: 140px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    address {
+      margin-bottom:10px;
+    }
+
+    .social-icons {
+      border-top:1px solid #ececec;
+      padding:10px 0;
+      ul {
+        list-style: none;
+        padding:0;
+
+        li {
+          display:inline-block;
+
+          img {
+              max-width:40px;
+          }
+        }
+      }
+    }
+
+    .copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px 0;
+    border-top: 1px solid #ececec;
+    margin-top: 10px;
+}
+
+}

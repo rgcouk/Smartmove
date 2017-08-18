@@ -1,0 +1,42 @@
+body {
+  color:#5a5a5a;
+}
+
+h2, h3, h4 {
+   font-family: 'Nexa';
+   font-weight: bold;
+   font-style: normal;
+}
+
+// Wrap
+.wrap {
+  padding:20px 15px;
+}
+
+// global map
+
+.map {
+  height:25vh;
+}
+
+
+// Forms
+.form-group {
+  input, select {
+    border-radius: 1px;
+  }
+}
+
+
+// Debugging Styles
+pre.dump {
+  display: block;
+  width: 100%;
+  clear: both;
+  color: #000 !important;
+  background: #ececec !important;
+  text-transform: none !important;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space:pre-wrap;
+}

@@ -1,0 +1,17 @@
+  <nav class="navbar navbar-light bg-faded {% if fn('is_front_page') %}home{% endif %} navbar-toggleable-md">
+    <div class="container">
+      <a class="navbar-brand" href="{{ site.url }}">
+      <img src="{{theme.link}}/assets/images/full_logo.png" class="img-fluid" alt="Smartmove Lettings">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> <span class="toggler-text">Click for Menu</span>
+      </button>
+  {% block header %}
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ml-auto">
+        {% include 'blocks/nav-primary.twig' with {menu: menu.get_items} %}
+        </ul>
+      </div>
+  {% endblock %}
+    </div>
+    </nav>

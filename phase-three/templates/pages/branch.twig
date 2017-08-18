@@ -1,0 +1,70 @@
+{% extends "templates/full-base.twig" %}
+{% block content %}
+<section id="branch">
+
+  <div class="container">
+    <h2 class="branch-title">Smartmove {{branch.title}} Branch</h2>
+      <div class="row">
+        <div class="col-sm-4 side">
+          <div class="contact-side">
+
+            <div class="map">
+             <div class="marker" data-lat="{{branch.map.lat}}" data-lng="{{branch.map.lng}}">
+               We are here
+             </div>
+            </div>
+
+            <address>
+              {{branch.street}}<br>
+              {{branch.city}}, {{branch.county}}<br>
+              {{branch.postcode}}
+              <!-- Small modal -->
+            </address>
+            <h4 class="phone"><i class="material-icons">local_phone</i>  {{branch.office_number}}</h4>
+            <div class="btn-group btn-group-justified" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Email Branch</button>
+              <button type="button" class="btn btn-fb"><i class="ion-social-facebook"></i></button>
+              <button type="button" class="btn btn-tw"><i class="ion-social-twitter"></i></button>
+            </div>
+
+
+          </div>
+          <h3>Branch Staff</h3>
+          <ul class="staff">
+            {% for staff in branch.get_field('staff_members') %}
+              <li>
+                <img src="{{ staff.photo}}" alt="" class="photo img-fluid">
+                <span class="info">
+                 <h4>{{staff.name}}</h4>
+                 {{staff.position}}
+                 <p class="phone"><i class="material-icons">local_phone</i> {{staff.contact_number}}</p>
+                 <span>
+              </li>
+
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col-sm-8 content">
+          <img src="{{branch.thumbnail.src}}" class="branch-cover img-fluid" alt="Image for smartmove {{post.title}} branch" />
+          <h3>About {{branch.title}} Branch</h2>
+
+          <div class="description">
+            {{branch.content}}
+          </div>
+
+        </div>
+      </div>
+
+
+  </div>
+</section>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+
+{% endblock %}
