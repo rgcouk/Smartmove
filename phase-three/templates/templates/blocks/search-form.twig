@@ -1,12 +1,12 @@
 <section id="searchForm">
   <div class="container">
     <h3>Are you looking for somewhere to rent?</h3>
-    <form action="{{ post.link }}" method="get">
+    <form action="/search.php" method="get">
       <div class="row holder">
         <div class="col-sm-2"><span class="hidden-md-down">Property</span> Type</div>
         <div class="col-sm-3">
-        <select class="form-control" id="property_type" name="property_type">
-          <option value="property" selected>View All</option>
+        <select class="form-control" id="propertyType" name="propertyType">
+          <option value="all" selected>View All</option>
           <option>Single Room</option>
           <option>Double Room</option>
           <option>1 Bedroom Property</option>
@@ -17,7 +17,7 @@
         </div>
         <div class="col-sm-2"><span class="hidden-md-down">Property</span>  Location</div>
         <div class="col-sm-3">
-          <select class="form-control" id="city" name="city">
+          <select class="form-control" id="propertyLocation" name="propertyLocation">
             <option value="all" selected>View All</option>
             <option>Boston</option>
             <option>Newark</option>

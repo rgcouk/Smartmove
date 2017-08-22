@@ -26,14 +26,6 @@
               {{property.postcode}}
               <!-- Small modal -->
             </address>
-
-            {% if property.available == 'no' %}
-            This property is available
-              {% elseif property.available == 'yes' %}
-              This property is not available
-              {% else %}
-              This property is available from date
-            {% endif %}
             <h4 class="price">£{{property.price}} <small>Per Week</small></h4>
 
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Rent Property</button>
@@ -55,7 +47,7 @@
               </li>
             {% endfor %}
           </ul>
-
+          
           <h3>About {{property.title}} property</h2>
 
           <div class="description">

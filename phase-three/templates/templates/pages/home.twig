@@ -1,0 +1,87 @@
+{% extends "templates/full-base.twig" %}
+
+{% block content %}
+<section id="home-hero">
+  <div class="container">
+    <h2>Guaranteed Rental &amp; Letting Agency</h2>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <p>
+          Smartmove is a letting agency specifically developed
+          by landlords for landlords.
+        </p>
+        <p>
+          It is designed to provide landlords with the most
+          complete and hassle free lettings service possible,
+          drawing on the many years experience of the
+          landlords who developed it.
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <img src="{{theme.link}}/assets/images/houses-feature.png" alt="Smartmove Lettings" class="img-fluid" />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% include 'blocks/search-form.twig' %}
+
+
+<section id="home-reasons">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 video">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="{{theme.link}}/assets/images/video/intro.mp4" preload="auto" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-sm-5 ticks">
+        <h2>Reasons Why To Choose Smart Move</h2>
+        <ul>
+          <li><i class="material-icons">done</i> Get Paid For Your Empty Property Today!</li>
+        	<li><i class="material-icons">done</i> No Late Payments or Arrears</li>
+        	<li><i class="material-icons">done</i> Receive Income While You Sell Your Property</li>
+        	<li><i class="material-icons">done</i> No Hidden Fees</li>
+        	<li><i class="material-icons">done</i> Full Property Management</li>
+        	<li><i class="material-icons">done</i> 24HR Landlord Hotline</li>
+        </ul>
+      <a href="#" class="btn btn-primary">More Information</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="home-features">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 item">
+        <h3>Online Rent Valuation</h3>
+        <p>
+          It has never been so easy to find out a guidline valuation for our guaranteed rental
+          scheme, complete our simple form and we will do the rest.
+        </p>
+        <a href="/ticket" class="btn btn-secondary">Get Quote</a>
+      </div>
+      <div class="col-sm-4 item">
+        <h3>Report a problem</h3>
+        <p>
+          At smartmove we take great pride in providing quality and insurance to our tenants, home owners &amp; neighbouring properties.
+        </p>
+        <a href="/ticket" class="btn btn-secondary">Report a Problem</a>
+        </div>
+      <div class="col-sm-4 item">
+        <h3>Supporting the community</h3>
+        <p>
+          We have been supporting local community ventures, sports teams and people for many years, if you know of a community cause that would benefit for sponsorship get in touch.
+        </p>
+        <a href="/ticket" class="btn btn-secondary">Request Form</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

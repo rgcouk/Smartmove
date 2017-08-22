@@ -23,9 +23,11 @@
 
     .contact-side {
       border: 1px solid rgba(204,204,204,0.48);
-        border-radius: 3px;
-        text-align: center;
-        box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.08);
+      border-radius: 3px;
+      text-align: center;
+      padding-bottom: 10px;
+      box-shadow: 3px 3px 7px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
       .map {
         height:25vh;
       }
